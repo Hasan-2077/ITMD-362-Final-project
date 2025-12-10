@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop – Limerence</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <nav class="primary-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">Shop</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+      </nav>
+      <div class="logo">Limerence</div>
+      <div class="header-icons">
+        <button class="icon-btn" aria-label="Search">🔍</button>
+        <button class="icon-btn" aria-label="Shopping bag">🛍️</button>
+        <button class="icon-btn" aria-label="Account">👤</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN SHOP SECTION -->
+  <main class="product-page">
+
+    <div class="filter-and-grid">
+
+      <!-- FILTER PANEL -->
+      <aside class="filter-panel">
+        <h2 class="filter-title">Filter search</h2>
+
+        <div class="filter-group">
+          <h3>Category</h3>
+          <label><input type="checkbox" name="category" value="shirts"> Shirts</label>
+          <label><input type="checkbox" name="category" value="pants"> Pants</label>
+          <label><input type="checkbox" name="category" value="jackets"> Jackets</label>
+          <label><input type="checkbox" name="category" value="coats"> Coats</label>
+          <label><input type="checkbox" name="category" value="shoes"> Shoes</label>
+        </div>
+
+        <div class="filter-group">
+          <h3>Size</h3>
+          <label><input type="checkbox" name="size" value="XS"> XS</label>
+          <label><input type="checkbox" name="size" value="S"> S</label>
+          <label><input type="checkbox" name="size" value="M"> M</label>
+          <label><input type="checkbox" name="size" value="L"> L</label>
+          <label><input type="checkbox" name="size" value="XL"> XL</label>
+          <label><input type="checkbox" name="size" value="XXL"> XXL</label>
+        </div>
+
+        <div class="filter-group">
+          <h3>Color</h3>
+          <label><input type="checkbox" name="color" value="black"> Black</label>
+          <label><input type="checkbox" name="color" value="white"> White</label>
+          <label><input type="checkbox" name="color" value="beige"> Beige</label>
+          <label><input type="checkbox" name="color" value="others"> Others</label>
+        </div>
+
+        <div class="filter-group">
+          <h3>Price</h3>
+          <div class="price-slider-container">
+            <span id="price-min">20</span>
+            <input type="range" id="price-slider" min="20" max="800" value="800">
+            <span id="price-max">800</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- PRODUCT GRID -->
+      <section class="product-grid">
+        <h2 class="grid-title">Choose Your Wardrobe</h2>
+
+        <div class="grid-items">
+          <!-- Outwear -->
+          <div class="product-card">
+            <p class="product-label">Outwear</p>
+            <div class="product-image-wrapper">
+              <img src="assets/outwear.jpeg" alt="Outwear" class="product-image">
+            </div>
+          </div>
+
+          <!-- Shirts -->
+          <div class="product-card">
+            <p class="product-label">Shirts</p>
+            <div class="product-image-wrapper">
+              <img src="assets/tops_1st_page.jpeg" alt="Shirts" class="product-image">
+            </div>
+          </div>
+
+          <!-- Pants -->
+          <div class="product-card">
+            <p class="product-label">Pants</p>
+            <div class="product-image-wrapper">
+              <img src="assets/bottoms.jpeg" alt="Pants" class="product-image">
+            </div>
+          </div>
+
+          <!-- Coats -->
+          <div class="product-card">
+            <p class="product-label">Coats</p>
+            <div class="product-image-wrapper">
+              <img src="assets/overcoat_1st_page.jpeg" alt="Coats" class="product-image">
+            </div>
+          </div>
+
+          <!-- Jackets -->
+          <div class="product-card">
+            <p class="product-label">Jackets</p>
+            <div class="product-image-wrapper">
+              <img src="assets/jacket_1st_page.jpeg" alt="Jackets" class="product-image">
+            </div>
+          </div>
+
+          <!-- Shoes -->
+          <div class="product-card">
+            <p class="product-label">Shoes</p>
+            <div class="product-image-wrapper">
+              <img src="assets/shoes.jpeg" alt="Shoes" class="product-image">
+            </div>
+          </div>
+        </div> <!-- .grid-items -->
+
+      </section>
+
+    </div> <!-- .filter-and-grid -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="about.html">About</a><span>|</span>
+      <a href="#">Careers</a><span>|</span>
+      <a href="#">Support</a><span>|</span>
+      <a href="faq.html">FAQ</a><span>|</span>
+      <a href="contact.html">Contact</a><span>|</span>
+      <a href="#">Instagram</a><span>|</span>
+      <a href="#">Pinterest</a><span>|</span>
+      <a href="#">Newsletter</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

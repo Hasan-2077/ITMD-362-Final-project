@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Limerence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar">
+      <div class="primary-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+      </div>
+      <div class="logo">Limerence</div>
+      <div class="header-icons">
+        <button class="icon-btn">🔍</button>
+        <button class="icon-btn">🛍️</button>
+        <button class="icon-btn">👤</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contact-wrapper">
+    <section class="contact-page">
+      <h2 class="contact-title">Contact Us!</h2>
+      <form class="contact-form" id="contact-form">
+
+        <div class="contact-row">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+
+        <div class="contact-row">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        <div class="contact-row">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" />
+        </div>
+
+        <div class="contact-row">
+          <label for="order">Order no (optional):</label>
+          <input type="text" id="order" name="order" />
+        </div>
+
+        <div class="contact-row">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <div class="contact-submit">
+          <button type="submit" id="submit-btn">Submit</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="#">About</a> |
+      <a href="#">Careers</a> |
+      <a href="#">Support</a> |
+      <a href="#">FAQ</a> |
+      <a href="#">Contact</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Pinterest</a> |
+      <a href="#">Newsletter</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
