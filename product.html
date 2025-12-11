@@ -18,10 +18,17 @@
         <a href="gallery.html" class="nav-link">Gallery</a>
       </nav>
       <div class="logo">Limerence</div>
+
       <div class="header-icons">
-        <button class="icon-btn" aria-label="Search">🔍</button>
-        <button class="icon-btn" aria-label="Shopping bag">🛍️</button>
-        <button class="icon-btn" aria-label="Account">👤</button>
+        <button class="icon-btn" aria-label="Search">
+          <img src="assets/search.png" alt="Search Icon" />
+        </button>
+        <button class="icon-btn" aria-label="Shopping Bag">
+          <img src="assets/bag.png" alt="Shopping Bag Icon" />
+        </button>
+        <button class="icon-btn" aria-label="Profile">
+          <img src="assets/profile.png" alt="Profile Icon" />
+        </button>
       </div>
     </div>
   </header>
@@ -37,10 +44,11 @@
 
         <div class="filter-group">
           <h3>Category</h3>
+          <label><input type="checkbox" name="category" value="outwear"> Outwear</label>
           <label><input type="checkbox" name="category" value="shirts"> Shirts</label>
           <label><input type="checkbox" name="category" value="pants"> Pants</label>
-          <label><input type="checkbox" name="category" value="jackets"> Jackets</label>
           <label><input type="checkbox" name="category" value="coats"> Coats</label>
+          <label><input type="checkbox" name="category" value="jackets"> Jackets</label>
           <label><input type="checkbox" name="category" value="shoes"> Shoes</label>
         </div>
 
@@ -65,9 +73,9 @@
         <div class="filter-group">
           <h3>Price</h3>
           <div class="price-slider-container">
-            <span id="price-min">20</span>
+            <span id="price-min">$20</span>
             <input type="range" id="price-slider" min="20" max="800" value="800">
-            <span id="price-max">800</span>
+            <span id="price-max">$800</span>
           </div>
         </div>
       </aside>
@@ -77,58 +85,78 @@
         <h2 class="grid-title">Choose Your Wardrobe</h2>
 
         <div class="grid-items">
-          <!-- Outwear -->
-          <div class="product-card">
+
+          <div class="product-card"
+               data-category="outwear"
+               data-size="M,L,XL"
+               data-color="black"
+               data-price="350">
             <p class="product-label">Outwear</p>
             <div class="product-image-wrapper">
               <img src="assets/outwear.jpeg" alt="Outwear" class="product-image">
             </div>
           </div>
 
-          <!-- Shirts -->
-          <div class="product-card">
+          <div class="product-card"
+               data-category="shirts"
+               data-size="S,M,L"
+               data-color="white"
+               data-price="120">
             <p class="product-label">Shirts</p>
             <div class="product-image-wrapper">
               <img src="assets/tops_1st_page.jpeg" alt="Shirts" class="product-image">
             </div>
           </div>
 
-          <!-- Pants -->
-          <div class="product-card">
+          <div class="product-card"
+               data-category="pants"
+               data-size="M,L"
+               data-color="beige"
+               data-price="200">
             <p class="product-label">Pants</p>
             <div class="product-image-wrapper">
               <img src="assets/bottoms.jpeg" alt="Pants" class="product-image">
             </div>
           </div>
 
-          <!-- Coats -->
-          <div class="product-card">
+          <div class="product-card"
+               data-category="coats"
+               data-size="L,XL"
+               data-color="black"
+               data-price="420">
             <p class="product-label">Coats</p>
             <div class="product-image-wrapper">
               <img src="assets/overcoat_1st_page.jpeg" alt="Coats" class="product-image">
             </div>
           </div>
 
-          <!-- Jackets -->
-          <div class="product-card">
+          <div class="product-card"
+               data-category="jackets"
+               data-size="M,L"
+               data-color="black"
+               data-price="300">
             <p class="product-label">Jackets</p>
             <div class="product-image-wrapper">
               <img src="assets/jacket_1st_page.jpeg" alt="Jackets" class="product-image">
             </div>
           </div>
 
-          <!-- Shoes -->
-          <div class="product-card">
+          <div class="product-card"
+               data-category="shoes"
+               data-size="M,L"
+               data-color="black"
+               data-price="180">
             <p class="product-label">Shoes</p>
             <div class="product-image-wrapper">
               <img src="assets/shoes.jpeg" alt="Shoes" class="product-image">
             </div>
           </div>
-        </div> <!-- .grid-items -->
+
+        </div>
 
       </section>
 
-    </div> <!-- .filter-and-grid -->
+    </div>
   </main>
 
   <!-- FOOTER -->

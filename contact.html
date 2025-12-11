@@ -12,14 +12,20 @@
     <nav class="nav-bar">
       <div class="primary-nav">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="products.html" class="nav-link">Shop</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
       </div>
       <div class="logo">Limerence</div>
       <div class="header-icons">
-        <button class="icon-btn">🔍</button>
-        <button class="icon-btn">🛍️</button>
-        <button class="icon-btn">👤</button>
+        <button class="icon-btn" aria-label="Search">
+          <img src="assets/search.png" alt="Search Icon" />
+        </button>
+        <button class="icon-btn" aria-label="Shopping Bag">
+          <img src="assets/bag.png" alt="Shopping Bag Icon" />
+        </button>
+        <button class="icon-btn" aria-label="Profile">
+          <img src="assets/profile.png" alt="Profile Icon" />
+        </button>
       </div>
     </nav>
   </header>
@@ -27,31 +33,36 @@
   <main class="contact-wrapper">
     <section class="contact-page">
       <h2 class="contact-title">Contact Us!</h2>
-      <form class="contact-form" id="contact-form">
+      <form class="contact-form" id="contact-form" novalidate>
 
         <div class="contact-row">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" />
+          <input type="text" id="name" name="name" required />
+          <span class="error-msg"></span>
         </div>
 
         <div class="contact-row">
           <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" />
+          <input type="email" id="email" name="email" required />
+          <span class="error-msg"></span>
         </div>
 
         <div class="contact-row">
           <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" />
+          <input type="text" id="subject" name="subject" required />
+          <span class="error-msg"></span>
         </div>
 
         <div class="contact-row">
           <label for="order">Order no (optional):</label>
           <input type="text" id="order" name="order" />
+          <span class="error-msg"></span>
         </div>
 
         <div class="contact-row">
           <label for="message">Message:</label>
-          <textarea id="message" name="message"></textarea>
+          <textarea id="message" name="message" required></textarea>
+          <span class="error-msg"></span>
         </div>
 
         <div class="contact-submit">

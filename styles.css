@@ -68,7 +68,7 @@ body {
 
 .logo {
   font-family: "Ephesis", cursive;
-  font-size: 40px;
+  font-size: 60px; /* 🔼 Increased from 40px */
   text-align: center;
   color: #b7931f;
 }
@@ -83,7 +83,14 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 20px;
+  padding: 0;
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
 }
 
 /* MAIN PAGE WRAPPER */
@@ -107,14 +114,14 @@ body {
 .hero-image-wrapper {
   display: inline-block;
   padding: 8px;
-  background: rgba(241, 228, 206, 0.6);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .hero-image {
   display: block;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
+  margin-left: 115px;
 }
 
 .hero-caption {
@@ -199,9 +206,9 @@ body {
 }
 
 .product-image-wrapper {
-  background-color: #ffffff;
-  border-radius: 6px;
-  padding: 16px;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
   width: 180px;
   height: auto;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
@@ -285,8 +292,7 @@ body {
   }
 }
 
-/* ========== ABOUT PAGE STYLES ========== */
-
+/* ABOUT PAGE */
 .about-wrapper {
   min-height: 100vh;
   display: flex;
@@ -321,8 +327,8 @@ body {
   background-color: #f1e4ce;
   padding: 24px 32px;
   border-radius: 8px;
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 100px;
+  margin-bottom: 60px;
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
@@ -350,7 +356,7 @@ body {
   flex-wrap: wrap;
   gap: 35px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 150px auto 0;
   padding: 0 40px;
 }
 
@@ -373,8 +379,7 @@ body {
   line-height: 1.5;
 }
 
-/* ========== PRODUCT PAGE STYLES ========== */
-
+/* PRODUCT PAGE */
 .product-page {
   background-color: #bead8e;
   padding: 24px;
@@ -382,8 +387,9 @@ body {
 
 .filter-and-grid {
   display: flex;
-  gap: 24px;
+  gap: 40px; /* Increased spacing between filter and grid */
   align-items: flex-start;
+  padding-right: 300px; /* 🔼 Add this to shift grid left */
 }
 
 .filter-panel {
@@ -391,6 +397,9 @@ body {
   padding: 24px;
   border-radius: 6px;
   min-width: 240px;
+  height: calc(100vh - 160px); /* 🔼 Dynamically stretch panel */
+  position: sticky;
+  top: 80px; /* Prevents it from overflowing top nav */
 }
 
 .filter-title {
@@ -471,8 +480,7 @@ body {
   }
 }
 
-/* ========== LOOKBOOK PAGE STYLES ========== */
-
+/* LOOKBOOK PAGE */
 .hero-video {
   width: 640px;
   max-width: 90%;
@@ -506,17 +514,16 @@ body {
   margin-top: 4px;
 }
 
-/* Force 4 seasonal items in one row */
 .values-section {
   display: flex;
   justify-content: center;
   gap: 40px;
-  flex-wrap: nowrap; /* Prevent wrap */
+  flex-wrap: nowrap;
   margin-top: 80px;
   padding-bottom: 40px;
 }
 
-/* ========== CONTACT PAGE STYLES ========== */
+/* CONTACT PAGE */
 .contact-wrapper {
   min-height: 100vh;
   display: flex;
@@ -539,8 +546,8 @@ body {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 60px; /* vertical spacing */
-  padding-right: 150px; /* shift form slightly to the left */
+  gap: 60px;
+  padding-right: 150px;
 }
 
 .contact-row {
@@ -579,7 +586,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  padding-left: 160px; /* match form shift */
+  padding-left: 160px;
 }
 
 .contact-submit button {
@@ -596,7 +603,7 @@ body {
   filter: brightness(0.95);
 }
 
-/* ========== FAQ PAGE STYLES ========== */
+/* FAQ PAGE */
 .faq-wrapper {
   padding: 40px 24px 60px;
   max-width: 800px;
@@ -616,13 +623,13 @@ body {
 .faq-container {
   display: flex;
   flex-direction: column;
-  gap: 36px; /* ✅ Increased vertical spacing between each Q&A box */
+  gap: 36px;
 }
 
 .faq-item {
   display: flex;
   flex-direction: column;
-  gap: 14px; /* Spacing between question and answer */
+  gap: 14px;
 }
 
 .faq-question {
@@ -643,7 +650,7 @@ body {
   font-weight: normal;
 }
 
-/* Sticky footer layout fix */
+/* Sticky footer fix */
 body {
   display: flex;
   flex-direction: column;
@@ -652,4 +659,45 @@ body {
 
 .site-footer {
   margin-top: auto;
+}
+
+.faq-question {
+  background-color: #f1e4ce;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #e2d3bb;
+}
+
+.faq-answer {
+  background-color: #f1e4ce;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: normal;
+  display: none;
+}
+
+.faq-answer.active {
+  display: block;
+}
+
+/* Contact form inline validation styles */
+.contact-error-msg {
+  color: #b00020;
+  font-size: 13px;
+  margin-top: 4px;
+  display: none;
+}
+.contact-input.invalid {
+  border: 1px solid #b00020;
 }
